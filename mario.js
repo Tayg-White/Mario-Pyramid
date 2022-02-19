@@ -20,14 +20,18 @@ function printPyramid(height) {
     let spaces = height - i - 1;
     let layer = "";
     for(let j=0; j<spaces; j++){
-      layer += " ";
+      layer += ".";
     }
     for(let j=0; j<bricks; j++){
       layer += "#";
     }
     console.log(layer); //once a row is done we print it out
-  }
     // TODO #1
     // print that pyramid!
-
+    const pyramid = document.createElement("p");
+    const node = document.createTextNode(layer);
+    pyramid.appendChild(node);
+    const element = document.getElementById("pyramid");
+    element.appendChild(pyramid);
+  }
 }
